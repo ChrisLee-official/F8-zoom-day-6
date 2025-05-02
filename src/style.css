@@ -5,9 +5,13 @@ html {
 }
 
 :root {
+  /* root of cv-flex */
   --color-main: #f3c90e;
   --backround-color: #a5a5a5;
   --font-color: #ffffff;
+
+  /* root of product-lists */
+  --product-main-color: rgb(170, 26, 26);
 }
 .cv-container {
   width: 100%;
@@ -246,4 +250,96 @@ a {
 }
 .pricing-wrapped .pricing-btn:hover {
   box-shadow: 0px 0px 20px 1px #5858587e;
+}
+
+/* CSS Of Product - List */
+.product-container {
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 30px;
+}
+.product-header {
+  text-align: center;
+  margin: 30px;
+}
+.product-header > h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.product-body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.product-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.product-wrapped {
+  width: calc((100% / 3) - 50px);
+  padding: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  border-radius: 10px;
+}
+.product-wrapped:hover {
+  box-shadow: 0px 0px 10px #5e5d5d;
+}
+.product-wrapped:hover img {
+  transform: translateY(-10px);
+}
+.product-top {
+  display: flex;
+  justify-content: space-between;
+}
+.product-payment {
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--product-main-color);
+  color: var(--product-main-color);
+  font-size: 1.5em;
+}
+.product-discount {
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: var(--product-main-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.product-discount i {
+  font-size: 1.3rem;
+}
+
+.product-image > img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  padding: 10px;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-middle {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+.product-name {
+  font-size: 2rem;
+}
+.product-price {
+  font-size: 1.8rem;
+  color: var(--product-main-color);
+  font-weight: bold;
+  padding-top: 10px;
+}
+.product-unit {
+  font-size: 1.8rem;
+  text-decoration: line-through;
+  color: #5e5d5d;
 }
